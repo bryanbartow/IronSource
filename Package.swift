@@ -16,6 +16,11 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "IronSource"),
+        .binaryTarget(
+            name: "IronSourceBinary",
+            url: "https://github.com/your-username/your-repo/releases/download/1.0.0/IronSource.xcframework.zip",
+            checksum: "your-checksum-here"
+        ),
         .testTarget(
             name: "IronSourceTests",
             dependencies: ["IronSource"]),
