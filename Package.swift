@@ -19,7 +19,7 @@ let package = Package(
         .binaryTarget(
             name: "IronSourceBinary",
             url: "https://github.com/bryanbartow/IronSource/blob/main/Resources/IronSource.xcframework.zip",
-            checksum: "your-checksum-here"
+            checksum: "77118dabaae0c1dac0eb0b380e4e4ba015e1b1d43f14212c082cc3e4adbaeec3"
         ),
         .testTarget(
             name: "IronSourceTests",
