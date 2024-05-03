@@ -4,11 +4,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "IronSourcePackage",
+    name: "IronSourceBinary",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "IronSourcePackage",
+            name: "IronSourceBinarye",
             targets: ["IronSourceBinary"]),
     ],
     targets: [
