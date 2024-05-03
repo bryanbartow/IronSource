@@ -4,12 +4,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "IronSourceBinary",
+    name: "IronSourcePackage",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "IronSourceBinarye",
-            targets: ["IronSourceBinary"]),
+            name: "IronSourcePackage",
+            targets: ["IronSourceFramework", "IronSourceAdQualityFramework"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -17,9 +17,12 @@ let package = Package(
         /*.target(
             name: "IronSource"),*/
         .binaryTarget(
-            name: "IronSourceBinary",
-            url: "https://raw.githubusercontent.com/bryanbartow/IronSourceBinary/main/IronSource.xcframework.zip",
-            checksum: "77118dabaae0c1dac0eb0b380e4e4ba015e1b1d43f14212c082cc3e4adbaeec3"
+            name: "IronSourceFramework",
+            path: "./Sources/IronSource.xcframework"
+        ),
+        .binaryTarget(
+            name: "IronSourceAdQualityFramework",
+            path: "./Sources/IronSourceAdQualitySDK.xcframework"
         ),
         /*.testTarget(
             name: "IronSourceTests",
