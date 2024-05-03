@@ -16,11 +16,6 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "IronSource"),
-        /*.binaryTarget(
-            name: "IronSourceSDKBinary",
-            url: "https://github.com/ironsource-mobile/iOS-sdk/blob/master/8.0.0/IronSource8.0.0.zip",
-            checksum: "your-checksum-here"
-        ),*/
         .testTarget(
             name: "IronSourceTests",
             dependencies: ["IronSource"]),
